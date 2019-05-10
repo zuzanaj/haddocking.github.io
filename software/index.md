@@ -19,7 +19,13 @@ This page provide you links to software and software manuals of the computationa
 
   * [**HADDOCK2.2 software**](/software/haddock2.2/)
 
+  * [**HADDOCK2.4 software**](/software/haddock2.2/)
+
+  * [**HADDOCK2.4 software md**](/software/haddock2.4_md/)
+
   * [**HADDOCK web server**](http://haddock.science.uu.nl/services/HADDOCK)
+
+  * [**HADDOCK 2.4  web server**](https://wenmr.science.uu.nl/haddock2.4/)
 
   * [**HADDOCK grid-enabled web server**](http://haddock.science.uu.nl/enmr/services/HADDOCK)
 <HR>
@@ -76,5 +82,3 @@ This page provide you links to software and software manuals of the computationa
 * HADDOCK refined models for the biological/crystallographic interfaces collected in the DC and MANY datasets: [https://doi.org/10.15785/SBGRID/566](https://doi.org/10.15785/SBGRID/566)
 
 * HADDOCK models of mutant protein complexes: [https://doi.org/10.15785/SBGRID/520](https://doi.org/10.15785/SBGRID/520)
-
-

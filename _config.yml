@@ -58,3 +58,6 @@ owner:
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "_utilities"]
+
+url: "" # Empty string will render the page successfully locally. Do not commit it to the main repository!
+incremental: true # This will be disabled by Github, but is useful for testing changes locally!

@@ -1,0 +1,500 @@
+  229  sudo chown -R zuzana  /usr/local/Cellar
+  230  brew update
+  231  brew update
+  232  sudo chown -R zuzana  /usr/local/Cellar
+  233  brew update
+  234   sudo chown -R $(whoami) /usr/local/Homebrew
+  235  brew update
+  236  zuzana@beetle21:~/Documents$ brew update
+  237  sudo chown -R zuzana:admin /usr/local
+  238  sudo chown -R "$USER":admin /usr/local
+  239  rvm install ruby-2.1.7
+  240  gem install bundler
+  241  ls
+  242  cd 
+  243  bundle exec jekyll serve
+  244  ls
+  245  conda env list
+  246  conda env list
+  247  conda --version
+  248  conda
+  249  conda list myenv
+  250  conda create --name myenv
+  251  ls
+  252  ls
+  253  source activate myenv
+  254  ls
+  255  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  256  vi /Users/zuzana/.rvm/log/1556012462_ruby-2.6.0/update_system.log
+  257  ls
+  258  rvm help mount
+  259      rvm mount /opt/ruby-1.9.3-p194/bin/ruby
+  260  homebrew update
+  261  brw update
+  262  brew update
+  263  brew untap homebrew/homebrew-dupes
+  264  brew update
+  265  brew untap homebrew/homebrew-fuse
+  266  brew update
+  267  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  268  rvm install ruby-2.1.7
+  269  rvm --default use ruby-2.1.7
+  270  gem install bundler
+  271  conda install -c anaconda openssl 
+  272  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+  273  rvm install ruby-2.1.7
+  274      rvm reinstall ruby-2.1.7
+  275  rvm --default use ruby-2.1.7
+  276  gem install bundler
+  277  conda list
+  278  brew install openssl
+  279  ls /usr/local/opt/openssl
+  280  ls /usr/local/opt/openssl
+  281  which openssl
+  282  rvm reinstall 2.1.7 --with-openssl-dir=/Users/zuzana/anaconda3/envs/myenv/bin/openssl
+  283  vi /Users/zuzana/.rvm/log/1556013847_ruby-2.1.7/gemset.pristine-ruby-2.1.7.log
+  284  rvm reinstall 2.4.0 --with-openssl-dir=/Users/zuzana/anaconda3/envs/myenv/bin/openssl
+  285  rvm --default use ruby-2.4.0
+  286  gem install bundler
+  287  git clone https://github.com/haddocking/haddocking.github.io.git haddocking-website
+  288  cd haddocking-website
+  289  ls
+  290  bundle install
+  291  ls
+  292  vi  _config.yml
+  293  bundle exec jekyll serve
+  294  ls
+  295  cd education/
+  296  ls
+  297  cd HADDOCK-protein-protein-basic/
+  298  ls
+  299  cd ../
+  300  ls
+  301  ls
+  302  vi index.md 
+  303  cd ..
+  304  ls
+  305  vi _config.yml
+  306  vi _config.yml
+  307  bundle exec jekyll serve
+  308  ls
+  309  bundle exec jekyll serve
+  310  ls
+  311  ls
+  312  ls
+  313  cd  haddocking-website/
+  314  ls
+  315  cd education/
+  316  ls
+  317  ls HADDOCK-protein-protein-basic/
+  318  ls HADDOCK-protein-protein-basic/index.md 
+  319  ls HADDOCK-protein-protein-basic-24/index.md 
+  320  meld
+  321  brew install meld
+  322  meld
+  323  run /bin/meld
+  324  /bin/meld
+  325  ~/Downloads/meld-3.20.1/bin/meld 
+  326  brew install pygobject3 --with-python3
+  327  conda install -c omnia meld-plugin 
+  328  ~/Downloads/meld-3.20.1/bin/meld 
+  329  sudo pip uninstall gi
+  330  ~/Downloads/meld-3.20.1/bin/meld 
+  331  ls
+  332  ~/Downloads/meld-3.20.1/bin/meld 
+  333  source activate myenv
+  334  ~/haddocking-website/education
+  335  ~/Downloads/meld-3.20.1/bin/meld 
+  336  sudo pip uninstall gi
+  337  brew install pygobject3 --with-python3
+  338  brew install pygobject3 
+  339  ~/Downloads/meld-3.20.1/bin/meld 
+  340  which gtk
+  341  which gtk+
+  342  conda load
+  343  conda list
+  344  conda intall gtk
+  345  conda install gtk
+  346  conda install gtk=
+  347  conda install gtk+
+  348  brew install gtk
+  349  ls /usr/local/Cellar/gtk+/
+  350  ~/Downloads/meld-3.20.1/bin/meld 
+  351  cd ~/Downloads/
+  352  ls
+  353  cd gtk+-3.24.8
+  354  ls
+  355  cat INSTALL
+  356  ./configure 
+  357  make
+  358  make instakk
+  359  make install
+  360  sl
+  361  cd ..
+  362  ls
+  363  cd /usr/local/Cellar/gtk+/
+  364  ls
+  365  cd ..
+  366  ls
+  367  cd gtk+/
+  368  ls
+  369  cd 2.24.32_2/
+  370  ls
+  371  cat README 
+  372  cd ..
+  373  ls
+  374  cd ..
+  375  cd gtk+/
+  376  ls
+  377  cp ~/Downloads/gtk+-3.24.8 .
+  378  cp -r ~/Downloads/gtk+-3.24.8 .
+  379  ls
+  380  cd gtk+-3.24.8/
+  381  ls
+  382  cat INSTALL
+  383  ls
+  384  ./config
+  385  ./configure 
+  386  brew instal gtk+3 
+  387  brew install gtk+3 
+  388  ~/Downloads/meld-3.20.1/bin/meld 
+  389  brew install gtksourceview3
+  390  ~/Downloads/meld-3.20.1/bin/meld 
+  391  meld
+  392  cd 
+  393  cd /Applications/Meld.app/Contents/MacOS/Meld
+  394  /Applications/Meld.app/Contents/MacOS/Meld
+  395  vi ~/.bash_profile
+  396  source ~/.bash_profile
+  397  meld
+  398  echo $PATH
+  399  vi ~/.bashrc 
+  400  source ~/.bashrc 
+  401  vi ~/.bashrc 
+  402  source ~/.bashrc 
+  403  meld
+  404  vi ~/.bashrc 
+  405  source ~/.bashrc 
+  406  meld
+  407  vi ~/.bashrc 
+  408  vi ~/.bash_profile
+  409  vi ~/.bashrc 
+  410  vi ~/.bash_profile
+  411  vi ~/.bash_profile
+  412  source ~/.bash_profile
+  413  Meld
+  414  vi ~/.bash_profile
+  415  ls ~/.bash_profile
+  416  mv /Applications/Meld.app/Contents/MacOS/Meld /Applications/Meld.app/Contents/MacOS/meld
+  417  vi ~/.bash_profile
+  418  meld
+  419  cd ~/haddocking-website/
+  420  ls
+  421  cd education/
+  422  ls
+  423  meld HADDOCK-protein-protein-basic/index.md HADDOCK-protein-protein-basic-24/index.md 
+  424  ls
+  425  cd haddocking-website/
+  426  ls
+  427  cd people/
+  428  ls
+  429  vi index.md 
+  430  ls
+  431  cat index.md 
+  432  cd ..
+  433  ls
+  434  grep font */*
+  435  vi _sass/page.scss 
+  436  grep prompt */*
+  437  vi _sass/elements.scss 
+  438  grep pymoltext *
+  439  grep pymoltext */*
+  440  grep pymoltext */*/*
+  441  head _sass/elements.scss
+  442  ls
+  443  cat README.md 
+  444  ls
+  445  ls
+  446  vi ~/.bash_profile
+  447  source ~/.bash_profile
+  448  ls
+  449  ls
+  450  ls
+  451  meld
+  452  source activate myenv
+  453  ls
+  454  cd education/
+  455  ls
+  456  meld HADDOCK-protein-protein-basic-24/index.md HADDOCK-protein-protein-basic/index.md 
+  457  meld HADDOCK-protein-protein-basic-24/index.md HADDOCK-protein-protein-basic/index.md 
+  458  bg
+  459  ls
+  460  cd ../
+  461  ls
+  462  cd software/
+  463  ls
+  464  cd haddock2.2/
+  465  ls
+  466  vi generate_air.gif 
+  467  vi generate_air.html 
+  468  ls
+  469  ssh alc
+  470  ssh alc
+  471  ls
+  472  cd ../
+  473  ls
+  474  cd ..
+  475  ls
+  476  vi index.md 
+  477  bundle exec jekyll serve
+  478  bundle exec jekyll serve
+  479  grep 'recent news' *
+  480  grep 'Recent News' */*
+  481  cd _site/
+  482  ls
+  483  cdls
+  484  ls
+  485  cd../
+  486  cd ..
+  487  grep Webportals *
+  488  grep Webportals */*
+  489  grep webportals */*
+  490  grep webportals */*/*
+  491  grep 'web portals' */*
+  492  grep 'Web Portals' */*
+  493  vi _site/index.html 
+  494  ls
+  495  cd _site/index.html 
+  496  ssh alc
+  497  ls
+  498  ls
+  499  ls
+  500  ls
+  501  vi setup.sh 
+  502  ./setup.
+  503  ./setup.a
+  504  ./setup.sh 
+  505  vi setup.sh
+  506  uname
+  507  uname -a
+  508  vi setup.sh
+  509  uname
+  510  vi setup.sh
+  511  ./setup.sh 
+  512  vi setup.sh
+  513  ./setup.sh 
+  514  ./setup.sh 
+  515  ./setup.sh 
+  516  ./setup.sh 
+  517  FOO=`uname -n`
+  518  echo "$FOO"
+  519  FOO=`uname`
+  520  echo "$FOO"
+  521  FOO='uname'
+  522  echo "$FOO"
+  523  echo "$FOO"
+  524  ./setup.sh 
+  525  if (`uname` == Darwin); then     ln -s zone_b.macosx zone_b; fi
+  526  ./setup.sh 
+  527  ./setup.sh 
+  528  ./setup.sh 
+  529  ./setup.sh 
+  530  ./setup.sh 
+  531  ./setup.sh 
+  532  ./setup.sh 
+  533  ./setup.sh 
+  534  chmod +x setup.sh 
+  535  ./setup.
+  536  ./setup.sh 
+  537  ./setup.sh 
+  538  Darwin
+  539  ./setup.sh 
+  540  ./setup.sh 
+  541  vi bla.sh
+  542  ./bla.sh
+  543  vi bla.sh 
+  544  chmod +x bla.sh 
+  545  ./bla.sh 
+  546  vi bla.sh 
+  547  ./bla.sh 
+  548  vi bla.sh 
+  549  ./bla.sh 
+  550  vi bla.sh 
+  551  ./bla.sh 
+  552  vi bla.sh 
+  553  ./bla.sh 
+  554  ./setup.s§
+  555  ./setup.sh
+  556  ./setup.sh
+  557  ./setup.sh
+  558  ./setup.sh
+  559  ./setup.sh
+  560  if [ -f zone_b ]; then     rm zone_b;  fi
+  561  vi zone_b
+  562  if [ -f zone_b ]; then ; rm zone_b ; fi
+  563  if [ -f zone_b ]; then  rm zone_b  fi; 
+  564  ls
+  565  vi bla.sh 
+  566  ./bla.sh 
+  567  ls
+  568  ls zone_b
+  569  vi zone_b
+  570  vi zone_b
+  571  vi bla.sh 
+  572  ./bla.sh 
+  573  rm bla.sh 
+  574  source setup.sh 
+  575  source setup.sh 
+  576  ./setup.sh 
+  577  ./setup.
+  578  ./setup.sh 
+  579  vi bla.sh
+  580  chmod +x bla.sh 
+  581  ./bla.sh 
+  582  ./setup.
+  583  ./setup.sh 
+  584  ls zone_b
+  585  vi zone_b
+  586  ./bla.sh 
+  587  ls zone_b.
+  588  ls zone_b
+  589  ./setup.sh 
+  590  ./setup.sh 
+  591  ls zone_b
+  592  vi zone_b
+  593  ./setup.sh 
+  594  rm zone_b
+  595  ./setup.sh 
+  596  ln
+  597  ln --h
+  598  ln -h
+  599  ./setup.sh 
+  600  ls
+  601  ls zone_b
+  602    ln -s zone_b.macosx zone_b
+  603  rm zone_b
+  604  ./setup.sh 
+  605  ld
+  606  ls
+  607  ls zone_b
+  608  vi zone_b
+  609  vi bla.sh
+  610  ./bla.sh 
+  611  vi bla.sh
+  612  ./bla.sh 
+  613  vi bla.sh
+  614  ./bla.sh 
+  615  uname
+  616  cat bla.sh 
+  617  if [ $(uname)=="linux" ] ; then echo "Hi" fi; 
+  618  vi bla.sh 
+  619  ./bla.sh 
+  620  vi bla.sh 
+  621  ./bla.sh 
+  622  vi bla.sh 
+  623  ./bla.sh 
+  624  vi bla.sh 
+  625  vi bla.sh 
+  626  ./bla.sh 
+  627  vi bla.sh 
+  628  vi setup.sh 
+  629  ./setup.
+  630  ./setup.sh 
+  631  source setup.sh 
+  632  cd ../../
+  633  echo $WDIR
+  634  cd ~/Documents/GitHub/HADDOCK-binding-sites-tutorial/
+  635  cd ../pdb-tools/pdbtools/
+  636  ls
+  637  export PATH=${PATH}:`pwd`
+  638  ls
+  639  export PATH=${PATH}:`pwd`
+  640  cd ..
+  641  pdb_validate.py
+  642  cd pdbtools/
+  643  chmod +x *
+  644  cd ..
+  645  pdb_validate.py
+  646  ls
+  647  cd pdbtools/
+  648  ls
+  649  cd ~/Documents/GitHub/HADDOCK-binding-sites-tutorial/runs/AcrB-rifampicin-pocket/structures/it1/water
+  650  pdb_segxchain.py begin/protein1.pdb | pdb_b.py -1 > AcrB_contacts.pdb
+  651  ls
+  652  $WDIR/contacts-analysis.csh `cat file.nam`
+  653  ls
+  654  $WDIR/contacts-statistics.csh `cat file.nam`
+  655  $WDIR/contacts-statistics.csh `head -1000 file.nam`
+  656  cd ../../../../
+  657  ls
+  658  cd AcrB-rifampicin-surface
+  659  ls
+  660  ls
+  661  cd structures/
+  662  ls
+  663  cd it1/
+  664  ls
+  665  cd water/
+  666  ls
+  667  $WDIR/contacts-analysis.csh `cat file.nam`
+  668  $WDIR/contacts-statistics.csh `cat file.nam`
+  669  $WDIR/contacts-statistics.csh `head -1000 file.nam`
+  670  ls
+  671  ls
+  672  cd ../../../../
+  673  ls
+  674  cd AcrB-rifampicin-surface
+  675  ls
+  676  pdb_segxchain.py begin/protein1.pdb | pdb_b.py -1 > AcrB_contacts.pdb
+  677  cd structures/it0
+  678  $WDIR/encode-contacts.csh structures/it0/Acontacts.lis AcrB_contacts.pdb
+  679  l
+  680  ls
+  681  ls structures/it0/Acontacts.lis
+  682  cd ../../
+  683  ls
+  684  $WDIR/encode-contacts.csh structures/it0/Acontacts.lis AcrB_contacts.pdb
+  685  cd
+  686  ls
+  687  cd alc_loc/
+  688  sshfs alc .
+  689  cd ..
+  690  sshfs alc alc_loc/
+  691  conda source myenv
+  692  source activate myenv
+  693  conda list
+  694  source myenv
+  695  history
+  696  conda
+  697  source ~/.bashrc
+  698  source ~/.bash_profile
+  699  conda activate myenv
+  700  ls
+  701  sshfs alc alc_loc/
+  702  sshfs alc:/home/zjandova  alc_loc/
+  703  cd alc_loc/
+  704  sl
+  705  ls
+  706  cd conda/
+  707  mv ~/Downloads/Anaconda3-2019.03-Linux-x86_64.sh .
+  708  cp  ~/Downloads/Anaconda3-2019.03-Linux-x86_64.sh .
+  709  cd ..
+  710  cd ..
+  711  ls
+  712  cd haddocking-website/
+  713  ls
+  714  cd education/
+  715  ls
+  716  ls */*/*jpg
+  717  grep jpg */*/index.md
+  718  grep powerfit-webserver/sigma-difference.jpg */*/index.md
+  719  grep right HADDOCK-24/*/index.md
+  720* 
+  721  ls
+  722  grep 'on the right' */index.md
+  723  ls
+  724  vi ~/.bashrc 
+  725  vi ~/.bash_profile
+  726  vi ~/.bash_profile
+  727  ls
+  728  history > bka
