@@ -129,7 +129,7 @@ In order to start the submission, either click on "*here*" next to the submissio
 #### Submission and validation of structures
 
 We will launch two docking runs, one for the dimeric and one for the tetrameric form of this target.
-For this we will make us of the [HADDOCK 2.4 interface](https://wenmr.science.uu.nl/haddock2.4/submit/1) of the HADDOCK web server, where you will need to register as a user and request Expert or Guru level access[here](https://nestor.science.uu.nl/auth/register/).
+For this we will make us of the [HADDOCK 2.4 interface](https://wenmr.science.uu.nl/haddock2.4/submit/1) of the HADDOCK web server, where you will need to register as a user and request Expert or Guru level access [here](https://nestor.science.uu.nl/auth/register/).
 
 We will first set up a symmetrical tetramer docking run:
 
@@ -166,7 +166,10 @@ The C-terminus of your protein is negatively charged -> Switch off
 
 #### Definition of restraints
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2.
+
+
+
+If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Since we do not define these residues manually, click on the "Next" button at the bottom left of the interface. 
 
 * **Step 6:** Turn on center-of-mass restraints. For this unfold the **Distance restraints menu** in the **Docking parameters window**
 
@@ -218,7 +221,7 @@ Use the **C2 symmetry segment pair** menu to define those six pairs of symmetry 
 <hr>
 ## First visual analysis of the results
 
-Once your run has completed you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/basic)
+Once your run has completed you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/T70-tetramer)
 
 **Note:** You can also view a result page from a downloaded pre-calculated docking run by opening in your favourite browser the `index.html` file provided in the run directory.
 

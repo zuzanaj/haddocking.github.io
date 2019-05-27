@@ -737,7 +737,7 @@ Not all predicted residues might however be solvent accessible. Therefore we sho
 The list of accessible residues (with a cutoff of 40% in this case) can be obtained with:
 
 <a class="prompt prompt-cmd">
-  awk \'{if (NF==13 && ($7>40 || $9>40)) printf \"%s \",$3; if (NF==14 && ($8>40 || $10>40)) printf \"%s \",$4}\' 4G6K.rsa
+  awk \'{if (NF==13 && ($7>40 || $9>40)) printf \"%s \",$3; if (NF==14 && ($8>40 || $10>40)) printf \"%s \",$4}\' 4G6K.rsa >  4G6K-active.list
 </a>
 
 Cross-referencing those against the predicted CDR residues gives a final list for HADDOCK:
@@ -746,7 +746,7 @@ Cross-referencing those against the predicted CDR residues gives a final list fo
 27 28 30 32 33 35 37 56 57 58 59 61 101 102 103 527 528 531 532 550 552 553 554 556 592 593 593 594
 
 </pre>
-Save this residue list (including an empty line for the passive residue) in a test file (e.g. [4G6K-active.list](/education/HADDOCK-24/HADDOCK-local-tutorial-24/4G6K-active.list){:target="_blank"})
+Save this residue list (including an empty line for the passive residue) in a test file (e.g. [4G6K-active.list](/education/HADDOCK-24/HADDOCK-local-tutorial-24/4G6K-active.list)
 
 
 
@@ -757,7 +757,7 @@ We can fetch is from the PDB using another `pdb-tools` script:
   pdb_fetch.py 4I1B |grep -v HOH >4I1B.pdb
 </a>
 
-**Note that the `grep` command in the above command will filter out the crystal water molecules. Alternatively inspec the file in PyMOL and remove any water or other crystallisation small molecule.
+**Note** that the `grep` command in the above command will filter out the crystal water molecules. Alternatively inspec the file in PyMOL and remove any water or other crystallisation small molecule.
 
 For the antigen, since we don't have information about the epitope in this case, we will define the entire solvent accessible surface area as passive. For this we will first use `freesasa` to calculate the solvent accessible residues and the filter those using a 40% accessibility cutoff (less than the 15% used previously to avoid defining too many passive residues which would slow down the computations).
 
@@ -801,7 +801,7 @@ The resulting AIR restraint file is: `antibody-antigen-ambig.tbl`
 Finally, let's assume we have one detected DSS cross-link between Lys63 of the antibody and Lys93 or the antigen with an upper limit of 23Å.
 We can define an ambiguous restraints between the CB of those two residues:
 
-This distance restraint can be combined with the specific distances defined to keep the two antibody chains together (see [Dealing with multi-chain proteins](#dealing-with-multi-chain proteins) into a new [antibody-antigen-unambig.tbl](/education/HADDOCK-local-tutorial-24/antibody-antigen-unambig.tbl) file:
+This distance restraint can be combined with the specific distances defined to keep the two antibody chains together (see [Dealing with multi-chain proteins](#dealing-with-multi-chain proteins) into a new [antibody-antigen-unambig.tbl](/education/HADDOCK-24/HADDOCK-local-tutorial-24/antibody-antigen-unambig.tbl) file:
 
 <pre style="background-color:#DAE4E7">
  ! antibody inter-chain restraints
@@ -871,7 +871,7 @@ HADDOCK parses the file and generates a directory structure, copying all the inp
 
 * **begin/** - This is where the all atom generated topologies and PDB structures for your input models will be created
 * **begin-aa/** - This is where the all atom generated topologies and PDB structures for your input models will be created in case coarse-grained docking is used
-* **data/** - This is where all your input data (restraints / models) are copies
+* **data/** - This is where all your input data (restraints / models) are copied
 * **packages/** - This directory is only used for grid submission by our webserver
 * **protocols/** - This directory contains all the CNS scripts required to run HADDOCK
 * **structures/** - This is where the docked models will be found, for rigid-body docking (`it0`), semi-flexible refinement (`it1`) and final solvated refinement (`it1/water`), together with analysis directories (`it1/analysis` and `it1/water/analysis`)

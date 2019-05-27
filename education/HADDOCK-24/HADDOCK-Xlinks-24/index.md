@@ -628,16 +628,13 @@ rigid-body docking and 200 for semi-flexible and water refinement). The full run
 above can be accessed at:
 
 1. **Scenario 1**:
-[http://milou.science.uu.nl/services/HADDOCK2.2/Files/PRE5-PUP2-MS-crosslinks/](http://milou.science.uu.nl/services/HADD
-OCK2.2/Files/PRE5-PUP2-MS-crosslinks/)
+[https://wenmr.science.uu.nl/haddock2.4/run/4242424242/RE5-PUP2-MS-crosslinks](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/RE5-PUP2-MS-crosslinks)
 
 2. **Scenario 2**:
-[http://milou.science.uu.nl/services/HADDOCK2.2/Files/PRE5-PUP2-MS-interface/](http://milou.science.uu.nl/services/HADD
-OCK2.2/Files/PRE5-PUP2-MS-interface/)
+[https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-interface](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-interface)
 
 3. **Scenario 3**:
-[http://milou.science.uu.nl/services/HADDOCK2.2/Files/PRE5-PUP2-MS-crosslinks-interface/](http://milou.science.uu.nl/services/HADD
-OCK2.2/Files/PRE5-PUP2-MS-crosslinks-interface/)
+[https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-crosslinks-interface](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-crosslinks-interface)
 
 
 <figure align="center">

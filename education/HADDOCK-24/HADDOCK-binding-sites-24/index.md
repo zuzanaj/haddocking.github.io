@@ -325,7 +325,8 @@ Segment ID to use during docking -> B
 
 #### Definition of restraints
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Instead of specifying active and passive residues manually, you supply a HADDOCK restraints TBL file (ambiguous restraints).
+If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Instead of specifying active and passive residues manually, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button in the **Input parameters window**.
+
 
 * **Step 5:** Turn on random surface restraints.
 For this unfold the **Distance Restraint menu** of the **Docking Parameters** window.

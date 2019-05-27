@@ -18,7 +18,7 @@ In this page you can find links to tutorials on the usage of our software and we
   cross-linking data in HADDOCK.
   This tutorial does not require any Linux expertise and only makes use of our web server and [PyMol](http://www.pymol.org) for visualisation/analysis.
 
-* [**DISVIS/HADDOCK 2.4 oligomer puzzle**](/education/HADDOC-24/XL-MS-oligomer-24):
+* [**DISVIS/HADDOCK 2.4 oligomer puzzle**](/education/HADDOCK-24/XL-MS-oligomer-24):
   In this tutorial you will have to solve an oligomer puzzle, namely predicting the correct oligomeric state
   of a symmetrical homomer complex based on a few (artificial) cross-links.
   The tutorial does not require any Linux expertise and only makes use of the DISVIS and HADDOCK web servers and [PyMol](http://www.pymol.org) for visualisation/analysis.
