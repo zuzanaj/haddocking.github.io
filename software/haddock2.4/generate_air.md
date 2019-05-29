@@ -1,8 +1,15 @@
---- layout: page tags: [Jekyll, HADDOCK, Bonvin, Docking, Simulation, Molecular Dynamics, Structural Biology, Computational Biology, Modelling, Protein Structure] modified: 2014-08-08T20:53:07.573882-04:00 comments: false image: feature: pages/banner_software.jpg ---
+---
+layout: page
+tags: [Jekyll, HADDOCK, Bonvin, Docking, Simulation, Molecular Dynamics, Structural Biology, Computational Biology, Modelling, Protein Structure]
+modified: 2014-08-08T20:53:07.573882-04:00
+comments: false
+image:
+  feature: pages/banner_software.jpg
+---
 
-# <font color="RED">HADDOCK2.2</font> manual
+# <font color="RED">HADDOCK2.4</font> manual
 
-## <font size="+2">G</font>enerate <font size="+2" color="RED">_A_</font>mbiguous <font size="+2" color="RED">_I_</font>nteraction <font size="+2" color="RED">_R_</font>estraints (<font size="+2" color="RED">_AIR_</font>s)
+## <font size="+2">G</font>enerate <font size="+2" color="RED">A</font>mbiguous <font size="+2" color="RED">I</font>nteraction <font size="+2" color="RED">R</font>estraints (<font size="+2" color="RED">AIR</font>s)
 
 <table>
 
@@ -17,7 +24,8 @@
 Define the active and passive residues for each molecule.  
 Use blank spaces or commas between residue numbers.
 
-_E.g._
+E.g.
+
 
 <table border="1" cellpadding="5">
 
@@ -199,13 +207,13 @@ _E.g._
 
 <input type="SUBMIT" name="submit1" value="Generate AIR restraints"> <input type="RESET" value="Reset">
 
-* * *
+Use "cut and paste" or save the generated AIR restraints to disk using "File save as"
 
-Use _"cut and paste"_ or save the generated AIR restraints to disk using _"File save as"_
+<br>
 
-* * *
+<font size="-1">
 
-<font size="-1">Please send any suggestions or enquiries to Alexandre Bonvin</font></form>
+Please send any suggestions or enquiries to Alexandre Bonvin</font></form>
 
 </td>
 

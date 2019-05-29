@@ -34,19 +34,19 @@ Fax: +31-30-2537623
 
 * * *
 
-**HADDOCK online** (setup your run): <u>[http://www.bonvinlab.org/software/haddock2.2/haddock-start](/software/haddock2.2/haddock-start)</u>  
+**HADDOCK online** (setup your run): [http://www.bonvinlab.org/software/haddock2.4/haddock-start](/software/haddock2.4/haddock-start)
 
-**HADDOCK manual**: <u>[http://www.bonvinlab.org/software/haddock2.2/manual](/software/haddock2.2/manual)</u>  
+**HADDOCK manual**: [http://www.bonvinlab.org/software/haddock2.4/manual](/software/haddock2.4/manual)
 
-**HADDOCK webserver**: <u>[http://haddock.science.uu.nl/services/HADDOCK2.2](http://haddock.science.uu.nl/services/HADDOCK2.2)</u>  
+**HADDOCK webserver**:  [http://haddock.science.uu.nl/services/HADDOCK2.4](http://haddock.science.uu.nl/services/HADDOCK2.4)   
 
-**HADDOCK grid-enabled webserver**: <u>[http://haddock.science.uu.nl/enmr/services/HADDOCK2.2](http://haddock.science.uu.nl/enmr/services/HADDOCK2.2)</u>  
+**HADDOCK grid-enabled webserver**:  [http://haddock.science.uu.nl/enmr/services/HADDOCK2.2](http://haddock.science.uu.nl/enmr/services/HADDOCK2.2)   
 
-**Getting the software**: <u>[license form](/software/haddock2.2/download)</u>  
+**Getting the software**:  [license form](/software/haddock2.2/download)   
 
-**Questions about HADDOCK or looking for support?** <u>[Ask BioExcel](http://ask.bioexcel.eu)</u>  
+**Questions about HADDOCK or looking for support?**  [Ask BioExcel](http://ask.bioexcel.eu)   
 
-**A short introduction:** View the [BioExcel CoE](http://www.bioexcel.eu) <u>[webinar about HADDOCK](https://www.youtube.com/watch?v=Dbv6Jvge0Zk&index=1&list=FLmVRUOHM_0Nsh7DrMpTHtQQ)</u>  
+**A short introduction:** View the [BioExcel CoE](http://www.bioexcel.eu)  [webinar about HADDOCK](https://www.youtube.com/watch?v=Dbv6Jvge0Zk&index=1&list=FLmVRUOHM_0Nsh7DrMpTHtQQ)   
 
 * * *
 

@@ -65,7 +65,7 @@ In that section there is also a paramater that defines if non-polar protons shou
 
 <pre>{* Remove non-polar hydrogens? *}
 {+ choice: true false +}
-{===>} delenph=true;
+{===>} delenph=true; 
 </pre>
 
 By default non-polar protons are deleted to speed-up the calculations. They are however accounted for in the heavy atoms parameters since the force field used (OPLS) is a united atom force field.
@@ -140,7 +140,7 @@ In HADDOCK 2.X, you have two options:
 
     HADDOCK 2.X offers the possibility to define multiple symmetry relationships within or in between molecules. This is done by using symmetry distance restraints (Nilges 1993). Symmetry distance restraints are a special class in CNS: for each restraint two distances are specified which are required to remain equal during the calculations, irrespective of the actual distance. They can be defined in CNS as:
 
-    <pre>noe
+    <pre>noe 
         class symm
         assign (resid 1 and name CA  and segid A)
                 (resid 50 and name CA  and segid B) 0 0 0
