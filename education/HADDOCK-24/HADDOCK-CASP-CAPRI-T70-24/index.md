@@ -85,18 +85,14 @@ source set-target.sh<BR>
 cd ..</a>
 
 
-<pre style="color:#d81f46">
-* I made a new set-target.sh<BR>
-</pre>
-
 If you don't want to wait with the docking runs to complete in order to proceed with the analysis (see below), you can already download pre-calculated runs using the script provided into the runs directory:
 
-<a class="prompt prompt-cmd">cd runs<BR>./download-run-data.csh<BR>cd ..</a>
+<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-h24.csh<BR>cd ..</a>
 
 This will download two reduced docking runs, one for the dimeric and one for the tetrameric forms of T70 (about 38MB of data).
 
 Or:
-<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-full.csh<BR>cd ..</a>
+<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-full-h24.csh<BR>cd ..</a>
 
 This will download two full docking runs, one for the dimeric and one for the tetrameric forms of T70  (about 800MB of data).
 
@@ -169,7 +165,7 @@ The C-terminus of your protein is negatively charged -> Switch off
 
 
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Since we do not define these residues manually, click on the "Next" button at the bottom left of the interface. 
+If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Since we do not define these residues, click on the "Next" button at the bottom left of the interface.
 
 * **Step 6:** Turn on center-of-mass restraints. For this unfold the **Distance restraints menu** in the **Docking parameters window**
 
@@ -221,9 +217,8 @@ Use the **C2 symmetry segment pair** menu to define those six pairs of symmetry 
 <hr>
 ## First visual analysis of the results
 
-Once your run has completed you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/T70-tetramer)
+Once your run has completed you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/T70-dimer) for dimer and [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/T70-tetramer) for tetramer. You can also quickly visualize a specific structure by clicking on the “eye” icon next to a structure.
 
-**Note:** You can also view a result page from a downloaded pre-calculated docking run by opening in your favourite browser the `index.html` file provided in the run directory.
 
 The run with reduced number of models (course setting) should be returning only one cluster. Load a representative model and compare it to the crystal structure:
 
@@ -262,10 +257,10 @@ Let's have a more detailed look at the quality and ranking of the generated mode
 
 In order to perform the more quantitative analysis, download the full run from the results page (provide in a link in the first line of the result page) and unpack it. Alternatively, download the pre-calculated data from the following links:
 
-* T70 tetramer docking - reduced settings: [link](https://surfdrive.surf.nl/files/index.php/s/rGOGKnVwF8wjjU1/download)
-* T70 tetramer docking - full sampling: [link](https://surfdrive.surf.nl/files/index.php/s/T9HOh5lAWgtO3nD/download)
-* T70 dimer docking - reduced settings: [link](https://surfdrive.surf.nl/files/index.php/s/1RSEiHK80uIL30l/download)
-* T70 dimer docking - full sampling: [link](https://surfdrive.surf.nl/files/index.php/s/b7qEcpzOPQfvXif/download)
+* T70 tetramer docking - reduced settings: [link](https://surfdrive.surf.nl/files/index.php/s/jUjk3gbLRkylPo4/download)
+* T70 tetramer docking - full sampling: [link](https://surfdrive.surf.nl/files/index.php/s/NQe3VPuPF05iFVY/download)
+* T70 dimer docking - reduced settings: [link](https://surfdrive.surf.nl/files/index.php/s/tnT2sZKcpDNmZeP/download)
+* T70 dimer docking - full sampling: [link](https://surfdrive.surf.nl/files/index.php/s/t7wIYpuddJqhlFn/download)
 
 Then start the quantitative analysis in the directory where you saved and unpacked the run with the following command:
 
@@ -288,16 +283,16 @@ Here is an example of what this script will return for a full tetramer docking r
 
 
 <pre>
-T70-tetramer-full
-  #it0: structures with i-RMSD<4A:       194
-  #it0: structures within best200 with i-RMSD<4A:       94
-  #it0: structures within best200 with i-RMSD<2A:       94
-  #it0: structures within best200 with i-RMSD<1A:        0
-  #it1: structures with i-RMSD<4A:       108
-  #it1: structures with i-RMSD<2A:       108
+T70-tetramer
+  #it0: structures with i-RMSD<4A:       211
+  #it0: structures within best400 with i-RMSD<4A:       41
+  #it0: structures within best400 with i-RMSD<2A:       41
+  #it0: structures within best400 with i-RMSD<1A:        0
+  #it1: structures with i-RMSD<4A:        54
+  #it1: structures with i-RMSD<2A:        54
   #it1: structures with i-RMSD<1A:         0
-  #water: structures with i-RMSD<4A:       103
-  #water: structures with i-RMSD<2A:       103
+  #water: structures with i-RMSD<4A:        54
+  #water: structures with i-RMSD<2A:        54
   #water: structures with i-RMSD<1A:         0
 </pre>
 
@@ -325,25 +320,20 @@ Here is an example of what this script will return for a full tetramer docking r
 
 <pre>
 ######################################################
+
   HADDOCK scoring water
 ______________________________________________________
-=========== T70-tetramer-full =============
+=========== T70-tetramer =============
 Rank of clusters with i-RMSD<4A:
-   1 clust3    1.31 +/-  0.07  Fnat=  0.49 +/-  0.02
-   2 clust8    1.26 +/-  0.04  Fnat=  0.51 +/-  0.06
-   3 clust6    1.28 +/-  0.06  Fnat=  0.49 +/-  0.05
-  16 clust12   4.27 +/-  4.08  Fnat=  0.31 +/-  0.01
-  17 clust11   6.65 +/-  4.73  Fnat=  0.33 +/-  0.02
+   1 clust5    1.33 +/-  0.03  Fnat=  0.57 +/-  0.02
+   4 clust12   1.31 +/-  0.06  Fnat=  0.61 +/-  0.05
 ######################################################
+
   HADDOCK scoring it1
 ______________________________________________________
-=========== T70-tetramer-full =============
+=========== T70-tetramer =============
 Rank of clusters with i-RMSD<4A:
-   1 clust3    1.33 +/-  0.03  Fnat=  0.69 +/-  0.01
-   2 clust8    1.31 +/-  0.02  Fnat=  0.67 +/-  0.02
-   3 clust7    1.32 +/-  0.01  Fnat=  0.69 +/-  0.00
-  17 clust13   4.17 +/-  3.93  Fnat=  0.48 +/-  0.08
-  18 clust12   4.26 +/-  4.08  Fnat=  0.40 +/-  0.02
+  14 clust11   1.33 +/-  0.03  Fnat=  0.58 +/-  0.01
 </pre>
 
 <a class="prompt prompt-question">

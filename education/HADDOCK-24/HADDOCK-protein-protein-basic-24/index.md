@@ -50,20 +50,49 @@ Also, if not provided with special workshop credentials to use the HADDOCK porta
 HADDOCK (see [http://www.bonvinlab.org/software/haddock2.2/](http://www.bonvinlab.org/software/haddock2.2/)) is a collection of python scripts derived from ARIA ([http://aria.pasteur.fr](http://aria.pasteur.fr)) that harness the power of CNS (Crystallography and NMR System – [http://cns-online.org](http://cns-online.org)) for structure calculation of molecular complexes. What distinguishes HADDOCK from other docking software is its ability, inherited from CNS, to incorporate experimental data as restraints and use these to guide the docking process alongside traditional energetics and shape complementarity. Moreover, the intimate coupling with CNS endows HADDOCK with the ability to actually produce models of sufficient quality to be archived in the Protein Data Bank.
 
 A central aspect to HADDOCK is the definition of Ambiguous Interaction Restraints or AIRs. These allow the translation of raw data such as NMR chemical shift perturbation or mutagenesis experiments into distance restraints that are incorporated in the energy function used in the calculations. AIRs are defined through a list of residues that fall under two categories: active and passive. Generally, active residues are those of central importance for the interaction, such as residues whose knockouts abolish the interaction or those where the chemical shift perturbation is higher. Throughout the simulation, these active residues are restrained to be part of the interface, if possible, otherwise incurring in a scoring penalty. Passive residues are those that contribute for the interaction, but are deemed of less importance. If such a residue does not belong in the interface there is no scoring penalty. Hence, a careful selection of which residues are active and which are passive is critical for the success of the docking.
-
 The docking protocol of HADDOCK was designed so that the molecules experience varying degrees of flexibility and different chemical environments, and it can be divided in three different stages, each with a defined goal and characteristics:
 
-* **1. Randomization of orientations and rigid-body minimization (it0)** <BR>
-In this initial stage, the interacting partners are treated as rigid bodies, meaning that all geometrical parameters such as bonds lengths, bond angles, and dihedral angles are frozen. The partners are separated in space and rotated randomly about their centres of mass. This is followed by a rigid body energy minimization step, where the partners are allowed to rotate and translate to optimize the interaction.
-The role of AIRs in this stage is of particular importance. Since they are included in the energy function being minimized, the resulting complexes will be biased towards them. For example, defining a very strict set of AIRs leads to a very narrow sampling of the conformational space, meaning that the generated poses will be very similar. Conversely, very sparse restraints (e.g. the entire surface of a partner) will result in very different solutions, displaying greater variability in the region of binding.
 
-* **2. Semi-flexible simulated annealing in torsion angle space (it1)** <BR>
-The second stage of the docking protocol introduces flexibility to the interacting partners through a three-step molecular dynamics-based refinement in order to optimize interface packing. It is worth noting that flexibility in torsion angle space means that bond lengths and angles are still frozen. The interacting partners are first kept rigid and only their orientations are optimized. Flexibility is then introduced in the interface, which is automatically defined based on an analysis of intermolecular contacts within a 5Å cut-off. This allows different binding poses coming from it0 to have different flexible regions defined. Residues belonging to this interface region are then allowed to move their side-chains in a second refinement step. Finally, both backbone and side-chains of the flexible interface are granted freedom.
-The AIRs again play an important role at this stage since they might drive conformational changes.
+**1. Randomization of orientations and rigid-body minimization (it0)**  
+In this initial stage, the interacting partners are treated as rigid bodies, meaning that all geometrical parameters such as bonds lengths, bond angles, and dihedral angles are frozen. The partners are separated in space and rotated randomly about their centres of mass. This is followed by a rigid body energy minimization step, where the partners are allowed to rotate and translate to optimize the interaction. The role of AIRs in this stage is of particular importance. Since they are included in the energy function being minimized, the resulting complexes will be biased towards them. For example, defining a very strict set of AIRs leads to a very narrow sampling of the conformational space, meaning that the generated poses will be very similar. Conversely, very sparse restraints (e.g. the entire surface of a partner) will result in very different solutions, displaying greater variability in the region of binding.
 
-* **3. Refinement in Cartesian space with explicit solvent (water)** <BR>
-<br>**Note:** This stage was part of the standard HADDOCK protocol up to (and including) v2.2. As of v2.4 it is no longer performed by default but the user still has the option of enabling it. In its place, a short energy minimisation is performed instead.<br><br>
-The final stage of the docking protocol immerses the complex in a solvent shell so as to improve the energetics of the interaction. HADDOCK currently supports water (TIP3P model) and DMSO environments. The latter can be used as a membrane mimic. In this short explicit solvent refinement the models are subjected to a short molecular dynamics simulation at 300K, with position restraints on the non-interface heavy atoms. These restraints are later relaxed to allow all side chains to be optimized.
+<details >
+<summary style="bold">
+<b><i>See animation of rigid-body minimization (it0):</i></b>
+</summary>
+<figure align="center">
+  <img src="/education/HADDOCK-24/HADDOCK-protein-protein-basic-24/haddock_mini.gif">
+</figure>
+</details>
+<br>
+
+**2. Semi-flexible simulated annealing in torsion angle space (it1)**   
+The second stage of the docking protocol introduces flexibility to the interacting partners through a three-step molecular dynamics-based refinement in order to optimize interface packing. It is worth noting that flexibility in torsion angle space means that bond lengths and angles are still frozen. The interacting partners are first kept rigid and only their orientations are optimized. Flexibility is then introduced in the interface, which is automatically defined based on an analysis of intermolecular contacts within a 5Å cut-off. This allows different binding poses coming from it0 to have different flexible regions defined. Residues belonging to this interface region are then allowed to move their side-chains in a second refinement step. Finally, both backbone and side-chains of the flexible interface are granted freedom. The AIRs again play an important role at this stage since they might drive conformational changes.
+
+  <details >
+  <summary style="bold">
+  <b><i>See animation of semi-flexible simulated annealing (it0):</i></b>
+  </summary>
+  <figure align="center">
+    <img src="/education/HADDOCK-24/HADDOCK-protein-protein-basic-24/haddock_sa.gif">
+  </figure>
+  </details>
+  <br>
+
+ **3. Refinement in Cartesian space with explicit solvent (water)**   
+ **Note:** This stage was part of the standard HADDOCK protocol up to (and including) v2.2. As of v2.4 it is no longer performed by default but the user still has the option of enabling it. In its place, a short energy minimisation is performed instead. The final stage of the docking protocol immerses the complex in a solvent shell so as to improve the energetics of the interaction. HADDOCK currently supports water (TIP3P model) and DMSO environments. The latter can be used as a membrane mimic. In this short explicit solvent refinement the models are subjected to a short molecular dynamics simulation at 300K, with position restraints on the non-interface heavy atoms. These restraints are later relaxed to allow all side chains to be optimized.
+
+ <details >
+ <summary style="bold">
+ <b><i>See animation of refinement in explicit solvent (water):</i></b>
+ </summary>
+ <figure align="center">
+   <img src="/education/HADDOCK-24/HADDOCK-protein-protein-basic-24/haddock_water.gif">
+ </figure>
+ </details>
+ <br>
+
+
 
 The performance of this protocol of course depends on the number of models generated at each step. Few models are less probable to capture the correct binding pose, while an exaggerated number will become computationally unreasonable. The standard HADDOCK protocol generates 1000 models in the rigid body minimization stage, and then refines the best 200 – regarding the energy function - in both it1 and water. Note, however, that while 1000 models are generated by default in it0, they are the result of five minimization trials and for each of these the 180º symmetrical solution is also sampled. Effectively, the 1000 models written to disk are thus the results of the sampling of 10.000 docking solutions.
 The final models are automatically clustered based on a specific similarity measure - either the *positional interface ligand RMSD* (iL-RMSD) that captures conformational changes about the interface by fitting on the interface of the receptor (the first molecule) and calculating the RMSDs on the interface of the smaller partner, or the *fraction of common contacts* (current default) that measures the similarity of the intermolecular contacts. For RMSD clustering, the interface used in the calculation is automatically defined based on an analysis of all contacts made in all models.
@@ -279,19 +308,19 @@ This interface allows us to modify many parameters that control the behaviour of
 
 <pre>
 {
-  runname = 'E2A-HPR',
-  auto_passive_radius = 6.5,
-  create_narestraints = True,
-  delenph = True,
-  ranair = False,
-  cmrest = False,
-  kcont = 1.0,
-  surfrest = False,
-  ksurf = 1.0,
-  noecv = True,
-  ncvpart = 2.0,
-  structures_0 = 1000,
-  ntrials = 5,
+  "runname": "E2A-HPR",
+  "auto_passive_radius" : 6.5,
+  "create_narestraints" : true,
+  "delenph": true,
+  "ranair" : false,
+  "cmrest" : false,
+  "kcont" : 1.0,
+  "surfrest" : false,
+  "ksurf" : 1.0,
+  "noecv" : true,
+  "ncvpart" : 2.0,
+  "structures_0" : 1000,
+  "ntrials" : 5,
 ...
 </pre>
 

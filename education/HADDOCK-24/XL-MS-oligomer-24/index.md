@@ -25,10 +25,10 @@ Based on those results you should then make a choice about the putative oligomer
 and then try to model its 3D structure using our HADDOCK web portal. This means defining the cross-links as distance restraints to guide the docking
 and imposing symmetry restraints to generate the proper homomeric complex. Those two aspects are described in two related online tutorials:
 
-* [**HADDOCK 2.4 MS cross-links tutorial**](/education/HADDOCK-24/HADDOCK-Xlinks-24/):
+* [**HADDOCK2.4 MS cross-links tutorial**](/education/HADDOCK-24/HADDOCK-Xlinks-24/):
   A tutorial demonstrating the use of cross-linking data from mass spectrometry to guide the docking in HADDOCK.
 
-* [**HADDOCK 2.4 ab-initio, multi-body symmetrical docking tutorial**](/education/HADDOCK-24/HADDOCK-CASP-CAPRI-T70-24):
+* [**HADDOCK2.4 ab-initio, multi-body symmetrical docking tutorial**](/education/HADDOCK-24/HADDOCK-CASP-CAPRI-T70-24):
   A tutorial demonstrating multi-body docking with HADDOCK using its ab-initio mode with symmetry restraints.
 
 
@@ -415,10 +415,9 @@ Segment ID to use during docking -> X (where X is C,D or E)
 
 #### Definition of restraints
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for all molecules.
+If everything went well, the interface window should have updated itself and it should now show the list of residues for all molecules. Skip the definition of active and passive residues and click on the  "Next" button at the bottom of the **Input parameters** window, which proceeds to the  **Distance Restraint menu**  menu of the **Docking Parameters** window.
 
 * **Step 6:** Input the cross-links distance restraints and turn on center-of-mass restraints.
-For this click on the "Next" button at the bottom left of the interface in the **Input parameters window** and continue to the **Distance Restraint menu**.
 
 <a class="prompt prompt-info">
 Input under the unambiguous distance restraints the cross-links distance restraints file _crosslinks-restraints.tbl_
@@ -466,16 +465,13 @@ The ranking of the clusters is based on the HADDOCK score. Consult the online [H
 pages for an explanation of the scoring scheme and the default weights used at various stages.
 Remember that we have increased the weight of the distance restraints for our runs since we wanted to put more weight on the cross-links which we considered highly reliable.
 
-<details style="background-color:#DAE4E7"><summary><b>Don't want to wait for your results?</b>
-</summary>
-<li> <a href="https://surfdrive.surf.nl/files/index.php/s/tQuToprVwHZORnb" target="_blank">Download dimer HADDOCK run</a></li>
-<li> <a href="https://surfdrive.surf.nl/files/index.php/s/za9ILYprxF9gDVw" target="_blank">Download trimer HADDOCK run</a></li>
-<li> <a href="https://surfdrive.surf.nl/files/index.php/s/VkiC8cZBosVALBR" target="_blank">Download tetramer HADDOCK run</a></li>
-<li> <a href="https://surfdrive.surf.nl/files/index.php/s/sAh09Cf2bJNykbk" target="_blank">Download pentamer HADDOCK run</a></li>
+Don't want to wait for your results?  
 
-</details>
+The completed dimer run can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/XL-MS-dimer).  
+The completed trimer run can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/XL-MS-trimer).  
+The completed tetramer run can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/XL-MS-tetramer).  
+The completed pentamer run can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/XL-MS-pentamer).    
 <br>
-
 
 Answer the following questions:
 

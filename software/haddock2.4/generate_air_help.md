@@ -24,12 +24,12 @@ image:
     **General**
 
     Before starting HADDOCK, <font color="RED">A</font>mbiguous <font color="RED">I</font>nteraction <font color="RED">R</font>estraints (<font color="RED">AIR</font>s) should be generated. For this, it is important to define the residues at the interface for each molecule based on NMR chemical shift perturbation data, mutagenesis data or any kind of data that provides information on the interaction interface.  
-    In the definition of those residues, one distinguishes between **_"active"_** and **_"passive"_** residues.  
+    In the definition of those residues, one distinguishes between ***"active"*** and ***"passive"*** residues.  
 
-    *   The **_"active"_** residues are those experimentally identified to be involved in the interaction between the two molecules **AND** solvent accessible (either main chain or side chain relative accessibility should be typically > 40-50%).
+    *   The ***"active"*** residues are those experimentally identified to be involved in the interaction between the two molecules **AND** solvent accessible (either main chain or side chain relative accessibility should be typically > 40-50%).
     **Note**
 
-    *   The **_"passive"_** residues are all solvent accessible surface neighbors of active residues.  
+    *   The ***"passive"*** residues are all solvent accessible surface neighbors of active residues.  
     **Note** that the active and passive residues have to be defined by the users based on their own interpretation of the experimental data, especially in the case of NMR titration data. One way to interpret the significance of the shift is to calculate the average perturbation and to consider that all perturbations higher than the average are significant.  
 
     Once you have defined your active and passive residues,
@@ -78,7 +78,9 @@ image:
     4.  AIRs are defined between each residue selected from molecule B (Bi + 5A neighbors) and the first residue randomly selected from molecule A and all its surface neighbors within a 7.5A cutoff (Ai + 7.5A neighbors)AIRs are thus defined from a 5A radius patch randomly selected from one molecule to a 7.5A radius patch randomly selected on the second molecule and vice-versa. The selected residues are written to disk in _**structures/it0**_ as _fileroot_1.disp,..._.  
 
     For the semi-flexible refinement stage, contact AIRs are automatically defined between all residues within 5A across the interface. In the final explicit solvent refinement, no AIR restraints will be defined.  
-    *   **Note1:** To ensure a thorough sampling of the surface, the number of structures generated at the rigid-body stage (it0) should be increased (e.g. 10000), depending on the extent of the surface to be sampled.*   **Note2:** The use of random AIRs is not compatible with other distance restraints (including unambiguous and hydrogen bond restraints).  
+    *   **Note1:** To ensure a thorough sampling of the surface, the number of structures generated at the rigid-body stage (it0) should be increased (e.g. 10000), depending on the extent of the surface to be sampled.   
+
+        **Note2:** The use of random AIRs is not compatible with other distance restraints (including unambiguous and hydrogen bond restraints).  
 
     * * *
 
@@ -168,7 +170,7 @@ image:
     The passive residues are all solvent accessible surface neighbors of active residues. To define them you can display your molecule in space-filling model ([rasmol](http://www.umass.edu/microbio/rasmol) will do) and color the active residues for example in red.
 
 
-    | <img src="/software/haddock2.4/hpr-csp-filtered.gif"  width="250"> |  Then, filter out the residues having a low solvent accessibility   (colored yellow in the figure). |
+    |<img src="/software/haddock2.4/hpr-csp-filtered.gif"  width="250"> |  Then, filter out the residues having a low solvent accessibility   (colored yellow in the figure). |
     |<img src="/software/haddock2.4/hpr-passive-filtered.gif"  width="250">| Select then all surface neighbors to define the passive residues (colored green in the figure). |
     |<img src="/software/haddock2.4/hpr-passive.gif" width="250">|  and filter them with the solvent accessibility criterion (see above).|
 

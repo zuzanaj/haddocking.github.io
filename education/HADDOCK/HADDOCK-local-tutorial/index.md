@@ -282,7 +282,7 @@ We suggest to create separate directories for the different cases and work from 
 <br>
 <hr>
 ### Cleaning PDB files prior to docking
-We will use here as example the E2A structure used as input in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK-protein-protein-basic/).
+We will use here as example the E2A structure used as input in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK/HADDOCK-protein-protein-basic/).
 This protein is part of a phospho-transfer complex and one of its histidine residue should in principle be phosphorylated.
 Start PyMOL and in the command line window of PyMOL (indicated by PyMOL>) type:
 
@@ -369,7 +369,7 @@ For HADDOCK, you will have to remove those double occupancies (or create multipl
 
 HADDOCK can take as input an ensemble of conformation. This has the advantage that it allows to pre-sample possible conformational changes. We however recommend to limit the number of conformers used for docking, since the number of conformer combinations of the input molecules might explode (e.g. 10 conformers each will give 100 starting combinations, and if we generate 1000 rigid body models (see [HADDOCK general concepts](#haddock-general-concepts) above) each combination will only be sampled 10 times).
 
-While the HADDOCK webportal will take those as an ensemble PDB file (with `MODEL` / `ENDMDL` statements), the local version of HADDOCK expects those models to be provided as single structure and an additional file providing a listing of the models. To illustrate this we will use the HPR protein used as input in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK-protein-protein-basic/). The input structure for docking corresponds to an NMR ensemble of 30 models.
+While the HADDOCK webportal will take those as an ensemble PDB file (with `MODEL` / `ENDMDL` statements), the local version of HADDOCK expects those models to be provided as single structure and an additional file providing a listing of the models. To illustrate this we will use the HPR protein used as input in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK/HADDOCK-protein-protein-basic/). The input structure for docking corresponds to an NMR ensemble of 30 models.
 
 We will now inspect the HPR structure. For this start PyMOL and in the command line window of PyMOL type:
 
@@ -499,7 +499,7 @@ Information about various types of distance restraints in HADDOCK can also be fo
 <hr>
 ### Defining AIRs from interface mapping
 
-We will use as example here the NMR chemical shift perturbations from the E2A-HPR complex used in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK-protein-protein-basic/). The following residues of E2A were identified by [Wang *et al*, EMBO J (2000)](http://onlinelibrary.wiley.com/doi/10.1093/emboj/19.21.5635/abstract){:target="_blank"} as having significant chemical shift perturbations:
+We will use as example here the NMR chemical shift perturbations from the E2A-HPR complex used in our [HADDOCK webserver basic protein-protein docking tutorial](/education/HADDOCK/HADDOCK-protein-protein-basic/). The following residues of E2A were identified by [Wang *et al*, EMBO J (2000)](http://onlinelibrary.wiley.com/doi/10.1093/emboj/19.21.5635/abstract){:target="_blank"} as having significant chemical shift perturbations:
 
 <a class="prompt prompt-info">38,40,45,46,69,71,78,80,94,96,141</a>
 
@@ -590,13 +590,13 @@ To use our `haddock-tools` `active-passive-to-ambig.py` script you need to creat
 
 For our E2A-HPR example this would be:
 
-* For E2A (a file called [e2a-act-pass.list](/education/HADDOCK-local-tutorial/e2a-act-pass.list){:target="_blank"}):
+* For E2A (a file called [e2a-act-pass.list](/education/HADDOCK/HADDOCK-local-tutorial/e2a-act-pass.list){:target="_blank"}):
 <pre style="background-color:#DAE4E7">
 38 40 45 46 69 71 78 80 94 96 141
 35 37 39 42 43 44 47 48 64 66 68 72 73 74 82 83 84 86 97 99 100 105 109 110 112 131 132 133 143 144
 </pre>
 
-* and for HPR (a file called [hpr-act-pass.list](/education/HADDOCK-local-tutorial/hpr-act-pass.list){:target="_blank"}):
+* and for HPR (a file called [hpr-act-pass.list](/education/HADDOCK/HADDOCK-local-tutorial/hpr-act-pass.list){:target="_blank"}):
 <pre style="background-color:#DAE4E7">
 15 16 17 20 48 49 51 52 54 56
 9 10 11 12 21 24 25 34 37 38 40 41 43 45 46 47 53 55 57 58 59 60 84 85
@@ -623,7 +623,7 @@ No output means that your TBL file is valid. You can also find TBL file examples
 <hr>
 ### Defining specific distance restraints
 
-You can define in HADDOCK unambiguous distance restraints between specific pairs of atoms to define restraints coming for example from MS cross-linking experiments or DEER experiments. As an illustration we will use cross-links from our [HADDOCK cross-links tutorial](/education/HADDOCK-Xlinks) obtained for the complex between PRE5 (UniProtKB: [O14250](http://www.uniprot.org/uniprot/O14250){:target="_blank"}) and PUP2 (UniProtKB: [Q9UT97](http://www.uniprot.org/uniprot/Q9UT97){:target="_blank"}). From MS, we have seven experimentally determined cross-links (4 ADH & 3 ZL) ([Leitner et al., 2014](https://doi.org/10.1073/pnas.1320298111){:target="_blank"}), which we will define as CA-CA distance restraints ([restraints.txt](/education/HADDOCK-local-tutorial/restraints.txt){:target="_blank"}):
+You can define in HADDOCK unambiguous distance restraints between specific pairs of atoms to define restraints coming for example from MS cross-linking experiments or DEER experiments. As an illustration we will use cross-links from our [HADDOCK cross-links tutorial](/education/HADDOCK/HADDOCK-Xlinks) obtained for the complex between PRE5 (UniProtKB: [O14250](http://www.uniprot.org/uniprot/O14250){:target="_blank"}) and PUP2 (UniProtKB: [Q9UT97](http://www.uniprot.org/uniprot/Q9UT97){:target="_blank"}). From MS, we have seven experimentally determined cross-links (4 ADH & 3 ZL) ([Leitner et al., 2014](https://doi.org/10.1073/pnas.1320298111){:target="_blank"}), which we will define as CA-CA distance restraints ([restraints.txt](/education/HADDOCK/HADDOCK-local-tutorial/restraints.txt){:target="_blank"}):
 
 <pre style="background-color:#DAE4E7">
 # ADH crosslinks
@@ -649,7 +649,7 @@ This is the format used by our [DisVis portal](https://haddock.science.uu.nl/ser
 * lower distance limit
 * upper distance limit
 
-The corresponding CNS-formatted HADDOCK restraint file for those would be ([unambig-xlinks.tbl](/education/HADDOCK-local-tutorial/unambig-xlinks.tbl){:target="_blank"}):
+The corresponding CNS-formatted HADDOCK restraint file for those would be ([unambig-xlinks.tbl](/education/HADDOCK/HADDOCK-local-tutorial/unambig-xlinks.tbl){:target="_blank"}):
 <pre style="background-color:#DAE4E7">
 assign (segid A and resid 27  and name CA) (segid B and resid 18  and name CA)  23 23 0
 assign (segid A and resid 122 and name CA) (segid B and resid 125 and name CA)  23 23 0
@@ -736,7 +736,7 @@ Cross-referencing those against the predicted CDR residues gives a final list fo
 27 28 30 32 33 35 37 56 57 58 59 61 101 102 103 527 528 531 532 550 552 553 554 556 592 593 593 594
 
 </pre>
-Save this residue list (including an empty line for the passive residue) in a test file (e.g. [4G6K-active.list](/education/HADDOCK-local-tutorial/4G6K-active.list){:target="_blank"})
+Save this residue list (including an empty line for the passive residue) in a test file (e.g. [4G6K-active.list](/education/HADDOCK/HADDOCK-local-tutorial/4G6K-active.list){:target="_blank"})
 
 
 
@@ -789,7 +789,7 @@ The resulting AIR restraint file is: `antibody-antigen-ambig.tbl`
 Finally, let's assume we have one detected DSS cross-link between Lys63 of the antibody and Lys93 or the antigen with an upper limit of 23Å.
 We can define an ambiguous restraints between the CB of those two residues:
 
-This distance restraint can be combined with the specific distances defined to keep the two antibody chains together (see [Dealing with multi-chain proteins](#dealing-with-multi-chain proteins) into a new [antibody-antigen-unambig.tbl](/education/HADDOCK-local-tutorial/antibody-antigen-unambig.tbl) file:
+This distance restraint can be combined with the specific distances defined to keep the two antibody chains together (see [Dealing with multi-chain proteins](#dealing-with-multi-chain proteins) into a new [antibody-antigen-unambig.tbl](/education/HADDOCK/HADDOCK-local-tutorial/antibody-antigen-unambig.tbl) file:
 
 <pre style="background-color:#DAE4E7">
  ! antibody inter-chain restraints

@@ -94,9 +94,6 @@ It might be necessary to add  executable permissions to the pdb-tools:
     chmod +x *py
 </a>
 
-<pre style="color:#d81f46">
-* I needed to add permission while in the directory
-</pre>
 
 Download then the data to run this tutorial from our GitHub
 data repository [here][link-data] or clone it from the command line:
@@ -124,22 +121,17 @@ source setup.sh<BR>
 cd ..
  </a>
 
-<pre style="color:#d81f46">
-* I added a new setup.sh for bash shells
-</pre>
-
-
 **Note**: This is defining some environment variable which we will use in the following. Repeat this step and the above step about defining the ```path``` everytime you open a new terminal window.
 
 If you don't want to wait with the docking runs to complete in order to proceed with the analysis (see section about *[Preparing PDB files for docking](#preparing-pdb-files-of-the-receptor-for-docking)* section below), you can already download pre-calculated runs using the script provided into the runs directory:
 
-<a class="prompt prompt-cmd">cd runs<BR>./download-run-data.csh<BR>cd ..</a>
+<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-h24.csh<BR>cd ..</a>
 
 This will download two reduced docking runs, one for the random sampling of the surface and one for the targeted protein-ligand docking  (about 450MB of compressed data).
 
 Or to download two full docking runs, one for the random sampling of the surface and one for the targeted protein-ligand docking  (about 6GB of compressed data).:
 
-<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-full.csh<BR>cd ..</a>
+<a class="prompt prompt-cmd">cd runs<BR>./download-run-data-full-h24.csh<BR>cd ..</a>
 
 
 
@@ -236,10 +228,6 @@ The PDB file of our receptor should now be ready for docking. You can also check
   pdb_validate.py 2J8S-renumbered.pdb
 </a>
 
-<pre style="color:#d81f46">
-* pdb_format.py -> pdb_validate.py
-</pre>
-
 This will report formatting issues.
 
 
@@ -325,7 +313,7 @@ Segment ID to use during docking -> B
 
 #### Definition of restraints
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Instead of specifying active and passive residues manually, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button in the **Input parameters window**.
+If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Since we are doing ab-initio docking, we do not provide any predefined information, skip this window and click on the "Next" button in the **Input parameters window**.
 
 
 * **Step 5:** Turn on random surface restraints.
@@ -411,7 +399,7 @@ number of MD steps during first rigid body cooling stage -> 0
 <hr>
 ## First analysis of the results
 
-Once your run has completed (this can take quite some time considering the size of the receptor) you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/basic).
+Once your run has completed (this can take quite some time considering the size of the receptor) you will be presented with a result page showing the cluster statistics and some graphical representation of the data. Such an example output page can be found [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/AcrB-rifampicin-surface).
 
 Instead, you can also use the precalculated run. Simply unpack the archive (see the [Setup](#setup) section for downloading the archives), go into the directory and open with your favorite web browser the index.html file to view the results page.
 
@@ -436,7 +424,7 @@ tar xzf \<archive\>.tgz
 **Note:** You can also view a result page from a downloaded pre-calculated docking run. For this go into the ```runs``` directory and then download the runs using:
 
 <a class="prompt prompt-linux">
-./download-run-data.csh
+./download-run-data-h24.csh
 </a>
 
 This will download two docking runs performed under course settings (i.e. reduced number of models), for a total of about 450MB of compressed data. Unpack the runs (using ```tar xfz <archive>.tgz```).
@@ -534,7 +522,7 @@ And then we will use this PDB file, together with the contacts statistics file j
 The result is a new PDB file called ```AcrB_contacts.pdb``` which can now be visualized in Pymol (we also load here the reference structure).
 If you have performed the analysis on a full run, use the ```AcrB_contacts.pdb``` file you just created. Otherwise, in order to get more significant results,
 use instead the model provided in the ```AcrB-rifampicin-surface-full``` directory in which you will find the pre-computed data from an analysis
-of 10000 rigid body docking (it0 models). The corresponding full run archive can be downloaded using the ```download-run-data-full.csh``` script
+of 10000 rigid body docking (it0 models). The corresponding full run archive can be downloaded using the ```download-run-data-full-h24.csh``` script
 (but beware it is a large amount of data >10GB when unpacked).
 
 <a class="prompt prompt-cmd">
@@ -587,7 +575,7 @@ Is this consistent with the observations by Sennhauser *et al*?.
 </a>
 
 <a class="prompt prompt-info">
-**Note:** You can repeat the same analysis for a full docking run if you are interested. For this download the full run archives using the download-run-data-full.csh script in the runs directory (about 6GB of compressed data!).
+**Note:** You can repeat the same analysis for a full docking run if you are interested. For this download the full run archives using the download-run-data-full-h24.csh script in the runs directory (about 6GB of compressed data!).
 </a>
 <a class="prompt prompt-info">
 But instead you also only look at the encoded contacts statistics in the PDB file provided in the runs directory: AcrB-rifampicin-surface-full-contacts.pdb.
@@ -687,7 +675,7 @@ Load the resulting model in pymol and type:
 zoom vis<br>
 hide lines<br>
 show cartoon<br>
-show mesh<br>
+show surface<br>
 spectrum b, blue_white_red, minimum=1, maximum=100<br>
 </a>
 
@@ -821,9 +809,13 @@ PDB structure to submit -> Browse and select rifampicin.pdb
 Segment ID to use during docking -> B
 </a>
 
+* **Step 4:** Click on the "Next" button at the bottom left of the interface. This will upload the structures to the HADDOCK webserver where they will be processed and validated (checked for formatting errors). The server makes use of [Molprobity](http://molprobity.biochem.duke.edu/) to check side-chain conformations, eventually swap them (e.g. for asparagines) and define the protonation state of histidine residues.
+
+ Instead of specifying active and passive residues, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button in the **Input parameters window**.
+
 #### Definition of restraints
 
-* **Step 4:** Click on the "Next" button to save current parameters. Instead of specifying active and passive residues, you can supply a HADDOCK restraints TBL files in the **Distance restraints menu** of the  **Docking parameters window**.
+* **Step 5:** Click on the "Next" button to save current parameters. Instead of specifying active and passive residues, you can supply a HADDOCK restraints TBL files in the **Distance restraints menu** of the  **Docking parameters window**.
 
 Input the restraint files for docking.
 
@@ -843,13 +835,13 @@ Clustering method (RMSD or Fraction of Common Contacts (FCC)) -> RMSD
 RMSD Cutoff for clustering (Recommended: 7.5A for RMSD, 0.75 for FCC) -> 2.0
 </a>
 
-* **Step 6:** Define when to use each of the two restraint files we are uploading: For this unfold the **Restraints energy constants menu**, and in that menu unfold the **Energy constants for ambiguous restraints** menu.
+* **Step 7:** Define when to use each of the two restraint files we are uploading: For this unfold the **Restraints energy constants menu**, and in that menu unfold the **Energy constants for ambiguous restraints** menu.
 
 <a class="prompt prompt-info">
-Last iteration (0-2) -> 0 (this defines that the ambiguous restraints (the act-act file) will only be used in iteration 0 (rigid-body docking)
+Last iteration -> it0 (this defines that the ambiguous restraints (the act-act file) will only be used in iteration 0 (rigid-body docking)
 </a>
 
-* **Step 7:** Apply some ligand-specific scoring setting. For this unfold the **Scoring parameters menu**:
+* **Step 8:** Apply some ligand-specific scoring setting. For this unfold the **Scoring parameters menu**:
 
 Our recommended HADDOCK score settings for small ligands docking are the following:
 
@@ -872,7 +864,7 @@ Eelec 3 -> 0.1
 </a>
 
 
-* **Step 8:** Apply some ligand-specific setting. For this unfold the **Advanced sampling parameter menu**:
+* **Step 9:** Apply some ligand-specific setting. For this unfold the **Advanced sampling parameter menu**:
 
 <a class="prompt prompt-info">
 initial temperature for second TAD cooling step with flexible side-chain at the inferface -> 500
@@ -892,10 +884,10 @@ number of MD steps during first rigid body cooling stage -> 0
 
 #### Job submission
 
-* **Step 8:** You are ready to submit!  Click on the "Submit" button at the bottom left of the interface.
+* **Step 10:** You are ready to submit!  Click on the "Submit" button at the bottom left of the interface.
 
 
-Again, pre-calculated runs are provided if you have executed the ```download-run-data.csh``` and/or ```download-run-data-full.csh``` scripts provided in the ```runs``` directory (see [Setup](#setup) section).
+Again, pre-calculated runs are provided if you have executed the ```download-run-data-h24.csh``` and/or ```download-run-data-full-h24.csh``` scripts provided in the ```runs``` directory (see [Setup](#setup) section).
 
 
 <hr>

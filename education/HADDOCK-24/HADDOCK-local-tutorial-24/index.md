@@ -453,8 +453,6 @@ We added a TER statement between the chains and an END statement at the end of t
   restrain_bodies.py  4G6K-clean.pdb >antibody-unambig.tbl
 </a>
 
-><span style="color:red"> I had to modify restrain_bodies.py</span>
-
 
 The result file contains two CA-CA distance restraints with the exact distance measured between the picked CA atoms:
 
@@ -614,8 +612,6 @@ Using those two file we can generate the CNS-formatted AIR restraint files with 
 <a class="prompt prompt-cmd">
   active-passive-to-ambig.py e2a-act-pass.list hpr-act-pass.list >e2a-hpr-ambig.tbl
 </a>
-
-><span style="color:red"> I had to modify active-passive-to-ambig.py </span>
 
 
 This generates a file called `e2a-hpr-ambig.tbl` that contains the AIR restraints. The default distance range for those is between 0 and 2Å, which might seem short but makes senses because of the 1/r^6 summation in the AIR energy function that makes the effective distance be significantly shorter than the shortest distance entering the sum.

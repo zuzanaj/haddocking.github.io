@@ -513,7 +513,7 @@ Segment ID to use during docking -> B
 
 #### Definition of restraints
 
-If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Instead of specifying active and passive residues manually, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button in the **Input parameters window**.
+If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2. Instead of specifying active and passive residues, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button in the **Input parameters window**.
 
 * **Step5:** Input the CA-CA distance restraints from PS-HomPPI.
 For this unfold the **Distance Restraint menu** of the **Docking Parameters window**.
@@ -546,13 +546,13 @@ Number of structures for the explicit solvent refinement -> 50
 This interface allows us to modify many parameters that control the behaviour of HADDOCK but in our case the default values are all appropriate. It also allows us to download the input structures of the docking run (in the form of a tgz archive) and a haddockparameter file which contains all the settings and input structures for our run (in json format). We strongly recommend to download this file as it will allow you to repeat the run after uploading into the [file upload inteface](https://wenmr.science.uu.nl/haddock2.4/submit_file) of the HADDOCK webserver. It can serve as input reference for the run. This file can also be edited to change a few parameters for example. An excerpt of this file is shown here:
 
 <pre>
-HaddockRunParameters (
-  runname = 'CA-CA-docking',
-  auto_passive_radius = 6.5,
-  create_narestraints = True,
-  delenph = True,
-  ranair = False,
-  cmrest = False,
+{
+  "runname": "CA-CA-docking",
+  "auto_passive_radius": 6.5,
+  "create_narestraints": true,
+  "delenph": true,
+  "ranair": false,
+  "cmrest": false,
 ...
 </pre>
 
@@ -589,7 +589,7 @@ job has successfully completed.
 
 Once your run has completed you will be presented with a result page showing the cluster statistics and some graphical representation of the data (and if registered, you will also be notified by email).
 
-In case you don't want to wait for your results, open in a web browser the `inded.html` file found in the `1ACB/HADDOCK/output` directory from the tutorial data you downloaded. The result page should look like:
+In case you don't want to wait for your results, you can find it [here](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/CA-CA-docking). The result page should look like:
 
 <figure align="center">
 <img src="/education/HADDOCK-24/HADDOCK-CACA-guided-24/haddock_result-page.png">
@@ -736,10 +736,10 @@ These only report on the RMSD to chain A of the reference complex. Which modelli
 </summary>
 PyMol reports the following RMSDs:
 <pre>
-cluster1_1           RMSD =    1.576 (232 atoms)
-cluster1_2           RMSD =    1.615 (232 atoms)
-cluster1_3           RMSD =    1.580 (232 atoms)
-cluster1_4           RMSD =    1.648 (232 atoms)
+cluster1_1           RMSD =    1.488 (232 atoms)
+cluster1_2           RMSD =    1.492 (232 atoms)
+cluster1_3           RMSD =    1.488 (232 atoms)
+cluster1_4           RMSD =    1.553 (232 atoms)
 1ACB                 RMSD =    0.000 (240 atoms)
 model1-4b2aA_4b2aB   RMSD =    1.814 (232 atoms)
 model2-4b2aC_4b2aD   RMSD =    1.814 (232 atoms)
@@ -773,16 +773,18 @@ Which of the two chains undergoes larger conformational changes?
 </summary>
 PyMol reports the following RMSDs:
 <pre>
-cluster1_1           RMSD =    0.988 (56 atoms)
-cluster1_2           RMSD =    1.014 (56 atoms)
-cluster1_3           RMSD =    0.941 (56 atoms)
-cluster1_4           RMSD =    1.108 (56 atoms)
-1ACB                 RMSD =    0.000 (56 atoms)
+cluster1_1           RMSD =    1.157 (56 atoms)
+cluster1_2           RMSD =    1.150 (56 atoms)
+cluster1_3           RMSD =    1.185 (56 atoms)
+cluster1_4           RMSD =    1.343 (56 atoms)
+1acb                 RMSD =    0.000 (56 atoms)
 model1-4b2aA_4b2aB   RMSD =    1.551 (56 atoms)
 model2-4b2aC_4b2aD   RMSD =    1.550 (56 atoms)
-model3-4h4fA_4h4fB   RMSD =    1.550 (56 atoms)
+model3-4h4fA_4h4fB   RMSD =    1.551 (56 atoms)
 model4-3rdzB_3rdzD   RMSD =    1.551 (56 atoms)
-model5-3rdzA_3rdzC   RMSD =    1.550 (56 atoms)</pre>
+model5-3rdzA_3rdzC   RMSD =    1.550 (56 atoms)
+
+</pre>
 <br>
 We can see again that the CA-CA docked models have moved closer to the reference and in this case conformational changes up to 0.5Å are observed.
 </details>
@@ -937,12 +939,12 @@ sum of all bumps, and these latter two values normalized by the number of
 contacts are listed too for comparison purposes between, for example, small
 and large proteins.
 
-Total bump value: 1.709
-Total bump value per residue: 0.083
-Total number of bumps: 26
-Total squared bump value: 0.213
-Total number of bumps in the mildest bin: 25
-Total number of bumps in the second bin: 1
+Total bump value: 7.295
+Total bump value per residue: 0.244
+Total number of bumps: 77
+Total squared bump value: 1.232
+Total number of bumps in the mildest bin: 73
+Total number of bumps in the second bin: 4
 Total number of bumps in the middle bin: 0
 Total number of bumps in the fourth bin: 0
 Total number of bumps in the worst bin: 0

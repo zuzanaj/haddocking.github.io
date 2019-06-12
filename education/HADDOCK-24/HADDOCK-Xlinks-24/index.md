@@ -424,7 +424,7 @@ Segment ID to use during docking -> B
 
 If everything went well, the interface window should have updated itself and it should now show the list of residues for molecules 1 and 2.
 
-* **Step 5:** Instead of specifying active and passive residues manually, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button at the bottom of the **Input parameters** window, which proceeds to the  **Distance Restraint menu**  menu of the **Docking Parameters** window.
+* **Step 5:** Instead of specifying active and passive residues, you supply a HADDOCK restraints TBL file (ambiguous restraints). For this click on the "Next" button at the bottom of the **Input parameters** window, which proceeds to the  **Distance Restraint menu**  menu of the **Docking Parameters** window.
 
 Input the cross-links distance restraints and turn on center-of-mass restraints.
 
@@ -442,13 +442,13 @@ This interface allows us to modify many parameters that control the behaviour of
 
 
 <pre>
-HaddockRunParameters (
-  runname = 'PRE5-PUP2-MS-crosslinks',
-  auto_passive_radius = 6.5,
-  create_narestraints = True,
-  delenph = True,
-  ranair = False,
-  cmrest = True,
+{
+  "runname": "PRE5-PUP2-MS-crosslinks",
+  "auto_passive_radius": 6.5,
+  "create_narestraints": false,
+  "delenph": true,
+  "ranair": false,
+  "cmrest": true,
 ...
 </pre>
 
@@ -521,7 +521,7 @@ If everything went well, the interface window should have updated itself and it 
 <a class="prompt prompt-info">
 Active residues (directly involved in the interaction) -> 7,10,13,15,55,58,60,82,83,125,126,127,128,129,131,133
 </a>
-<a class="prompt prompt-info">Define passive residues automatically around the active residues -> check box
+<a class="prompt prompt-info">Define passive residues automatically around the active residues -> switch on
 </a>
 
 * **Step 6:** Specify the active residues for the second molecule. For this unfold the "Molecule 2 - parameters" if it isn't already unfolded.
@@ -529,7 +529,7 @@ Active residues (directly involved in the interaction) -> 7,10,13,15,55,58,60,82
 <a class="prompt prompt-info">
 Active residues (directly involved in the interaction) -> 1,2,3,5,8,11,13,15,16,17,114,121,122,123,124,140,152,154,177
 </a>
-<a class="prompt prompt-info">Define passive residues automatically around the active residues -> check box
+<a class="prompt prompt-info">Define passive residues automatically around the active residues -> switch on
 </a>
 
 #### Job submission
@@ -586,7 +586,7 @@ If everything went well, the interface window should have updated itself and it 
 <a class="prompt prompt-info">
 Active residues (directly involved in the interaction) -> 7,10,13,15,55,58,60,82,83,125,126,127,128,129,131,133
 </a>
-<a class="prompt prompt-info">Define passive residues automatically around the active residues -> check box
+<a class="prompt prompt-info">Define passive residues automatically around the active residues -> switch on
 </a>
 
 * **Step 6:** Specify the active residues for the second molecule. For this unfold the "Molecule 2 - parameters" if it isn't already unfolded.
@@ -594,10 +594,10 @@ Active residues (directly involved in the interaction) -> 7,10,13,15,55,58,60,82
 <a class="prompt prompt-info">
 Active residues (directly involved in the interaction) -> 1,2,3,5,8,11,13,15,16,17,114,121,122,123,124,140,152,154,177
 </a>
-<a class="prompt prompt-info">Define passive residues automatically around the active residues -> check box
+<a class="prompt prompt-info">Define passive residues automatically around the active residues -> switch on
 </a>
 
-* **Step 5:** Additionally to the active residues assigned by DisVis, it is neccessary to upload a restraint file containing information about crosslinks . For this click on the "Next" button at the bottom of the **Input parameters** window, which proceeds to the  **Distance Restraint menu**  menu of the **Docking Parameters** window.
+* **Step 5:** Additionally to the active residues assigned by DisVis, it is necessary to upload a restraint file containing information about crosslinks . For this click on the "Next" button at the bottom of the **Input parameters** window, which proceeds to the  **Distance Restraint menu**  menu of the **Docking Parameters** window.
 
 Input the cross-links distance restraints and turn on center-of-mass restraints.
 
@@ -628,7 +628,7 @@ rigid-body docking and 200 for semi-flexible and water refinement). The full run
 above can be accessed at:
 
 1. **Scenario 1**:
-[https://wenmr.science.uu.nl/haddock2.4/run/4242424242/RE5-PUP2-MS-crosslinks](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/RE5-PUP2-MS-crosslinks)
+[https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-crosslinks](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-crosslinks)
 
 2. **Scenario 2**:
 [https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-interface](https://wenmr.science.uu.nl/haddock2.4/run/4242424242/PRE5-PUP2-MS-interface)
@@ -650,7 +650,7 @@ For each of the three scenarios:
 
 __Note:__ The bottom of the page gives you some graphical representations of the results, showing the distribution of
 the solutions for various measures (HADDOCK score, van der Waals energy, ...) as a function of the RMSD from the best
-generated model (the best scoring model).
+generated model (the best scoring model). You can also quickly visualize a specific structure by clicking on the “eye” icon next to a structure.
 
 
 <figure align="center">
@@ -670,7 +670,7 @@ The cluster numbering reflects the size of the cluster, with cluster 1 being the
 components of the HADDOCK score are also reported for each cluster on the results web page.
 
 <a class="prompt prompt-question">Consider the cluster scores and their standard deviations.</a>
-<a class="prompt prompt-question">Is the top ranked cluster significantly better than the second one? (This is also
+<a class="prompt prompt-question">Is the top ranked significantly better than the second one? (This is also
 reflected in the z-score).</a>
 
 In case the scores of various clusters are within the standard deviation from each other, all should be considered as a
@@ -900,7 +900,7 @@ The cluster number only reflects the size of the cluster, with cluster1 being th
 <br>
 Cluster1 of the scenario 3 docking run using both cross-links and the interfaces predicted by DisVis nicely matches the crystal structure.
 This is also the top-ranking cluster according to HADDOCK.
-</a>
+
 </details>
 
 <br>
@@ -929,13 +929,14 @@ Does the docking using only the predicted interfaces from the DisVis interaction
 <summary>See solution for scenario 2:
 </summary>
 <figure align="center">
-  <img src="/education/HADDOCK-Xlinks-24/interface-vs-xray.png">
+  <img src="/education/HADDOCK-24/HADDOCK-Xlinks-24/interface-vs-xray.png">
 </figure>
 <br>
-Cluster9 of the scenario 2 docking run using the interfaces predicted by DisVis nicely matches the crystal structure.
-Cluster9 in this case is the second-ranking cluster. Its score (-85+/-12) is higher (the lower the score the better) than
-the top-ranking cluster (-104+/-21), but both cluster have large standard deviations in their score and overlap.
-</a>
+Cluster10 of the scenario 2 docking run using the interfaces predicted by DisVis nicely matches the crystal structure.
+Cluster10 in this case is the third-ranking cluster. Its score (-73.0 +/- 6.5) is higher (the lower the score the better) than
+the top-ranking cluster (-112.8 +/- 7.0). This is a nice example that scoring remains a challenge. We therefore always recommend
+to look at multiple solutions and possibly cross-validate with additional data.
+
 </details>
 
 <br>
