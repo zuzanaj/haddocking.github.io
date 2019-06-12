@@ -1,0 +1,22 @@
+# Site navigation links
+
+- title: News
+  url: /news/
+
+- title: Education
+  url: /education/
+
+- title: People
+  url: /people/
+
+- title: Publications
+  url: /publications/
+  
+- title: Research
+  url: /research/
+
+- title: Software
+  url: /software/
+
+- title: Web Portals
+  url: http://haddock.science.uu.nl/
