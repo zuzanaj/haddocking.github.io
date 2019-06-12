@@ -451,7 +451,7 @@ Eair 2	 -> 1.0<br>
 Eair 3	 -> 1.0<br>
 </a>
 
-#### Submission
+#### Job Submission
 
 * **Step 10:** You are ready to submit! Click on the "Submit" button at the bottom left of the interface.
 

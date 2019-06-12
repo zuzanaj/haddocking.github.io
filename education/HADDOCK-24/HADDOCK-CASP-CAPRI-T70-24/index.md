@@ -211,6 +211,8 @@ Use this type of restraints	 -> switch on
 
 Use the **C2 symmetry segment pair** menu to define those six pairs of symmetry restraints. Use for defining the segments again residues 6 and 78 as start and end points.
 
+#### Job submission
+
 * **Step 10:** You are ready to submit!  Click on the "Submit" button at the bottom left of the interface.
 
 
